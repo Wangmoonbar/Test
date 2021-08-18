@@ -60,16 +60,26 @@ public class App {
 			String name = timeClockDatas.get(i).getEmployeeName();
 			double pay = totalHours*timeClockDatas.get(i).getHourilyRate();
 			
-			pay=empnameAndPay.getOrDefault(name, 0.0)+pay;
-			empnameAndPay.put(name, pay);
+//			pay=empnameAndPay.getOrDefault(name, 0.0)+pay;
+//			empnameAndPay.put(name, pay);
+			
+			if(empnameAndPay.containsKey(name)) {
+				pay+=empnameAndPay.get(name);
+				empnameAndPay.put(name, pay);
+			}else {
+				empnameAndPay.put(name, pay);
+			}
 		}
 		
-		Set<Entry<String, Double>> e = empnameAndPay.entrySet();
-		for (Entry<String, Double> entry : e) {
-			System.out.println(entry);
+//		Set<Entry<String, Double>> e = empnameAndPay.entrySet();
+//		for (Entry<String, Double> entry : e) {
+//			System.out.println(entry);
+//		}
+		Set<String> empNames = empnameAndPay.keySet();
+		for(String empname:empNames) {
+			double pay = empnameAndPay.get(empname);
+			printSomebodyPay(empname, pay);
 		}
-		
-		
 	}
 	
 	/**
@@ -80,5 +90,4 @@ public class App {
 	private static void printSomebodyPay(String name, double pay) {
 		System.out.printf("%s: %.2f$\n", name, pay);
 	}
-
 }

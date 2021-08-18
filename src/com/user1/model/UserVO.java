@@ -1,4 +1,4 @@
-package com.user.model;
+package com.user1.model;
 
 public class UserVO {
 	private Integer user_no;

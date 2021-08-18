@@ -9,4 +9,43 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+
+  <servlet>
+    <servlet-name>AnimalServlet</servlet-name>
+    <servlet-class>com.animal.controller.AnimalServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AnimalServlet</servlet-name>
+    <url-pattern>/animal/animal.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>DBGifReader1</servlet-name>
+    <servlet-class>com.animal.controller.DBGifReader1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DBGifReader1</servlet-name>
+    <url-pattern>/animal/DBGifReader1.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.user1.controller.UserController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/user/user.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>MemberServlet</servlet-name>
+    <servlet-class>com.member.controller.MemberServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemberServlet</servlet-name>
+    <url-pattern>/member/member.do</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>

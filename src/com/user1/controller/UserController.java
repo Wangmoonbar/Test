@@ -1,4 +1,4 @@
-package com.user.controller;
+package com.user1.controller;
 
 import java.io.IOException;
 import java.util.LinkedList;
@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.user.model.UserService;
-import com.user.model.UserVO;
+import com.user1.model.UserService;
+import com.user1.model.UserVO;
 
 @WebServlet("/UserController")
 public class UserController extends HttpServlet {
